@@ -123,37 +123,36 @@
   /* ═══ HERO ═══ */
   .hero {
     background: var(--black);
+    background-image: url('https://rothlighting.net/wp-content/uploads/2023/09/Roth_Airport_Walkway-NeonEdit-32-1024x684.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--white);
-    padding: 140px 0 80px;
+    padding: 200px 0 140px;
     position: relative;
     overflow: hidden;
   }
   .hero::before {
     content: '';
     position: absolute;
-    top: -200px;
-    right: -200px;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+    inset: 0;
+    background: rgba(10,10,10,0.55);
+    z-index: 0;
   }
   .hero::after {
     content: '';
     position: absolute;
-    bottom: -100px;
-    left: 20%;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, transparent 70%);
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,10,0.15) 0%, rgba(10,10,10,0.4) 100%);
+    z-index: 0;
   }
   .hero .container { position: relative; z-index: 1; }
   .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
   }
   .hero-overline {
     font-size: 0.72rem;
@@ -164,6 +163,7 @@
     margin-bottom: 16px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
   }
   .hero-overline::before {
@@ -186,7 +186,7 @@
     margin-bottom: 32px;
     font-weight: 400;
   }
-  .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
   .hero-image {
     border-radius: 8px;
     overflow: hidden;
@@ -526,7 +526,6 @@
 
   /* ═══ RESPONSIVE ═══ */
   @media (max-width: 1024px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .feature-grid { grid-template-columns: 1fr; gap: 40px; }
     .trust-grid { grid-template-columns: repeat(2, 1fr); }
@@ -612,9 +611,6 @@
           <a href="https://rothlighting.net/contact/" class="btn btn-white btn-lg">Get in Touch</a>
           <a href="https://rothlighting.net/projects/?lex%5Blocation%5D=application_gallery&lex%5Bsub_resource%5D=galleries" class="btn btn-outline-white btn-lg">View Projects</a>
         </div>
-      </div>
-      <div class="hero-image fade-up d4">
-        <img src="https://rothlighting.net/wp-content/uploads/2023/09/Roth_Airport_Walkway-NeonEdit-32-1024x684.jpg" alt="Las Vegas Airport Lighting by Roth Lighting">
       </div>
     </div>
   </div>
